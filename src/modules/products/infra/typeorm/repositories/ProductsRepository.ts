@@ -49,7 +49,7 @@ class ProductsRepository implements IProductsRepository {
 
     productEntities.forEach(product => {
       // eslint-disable-next-line no-param-reassign
-      product.quantity = productQuantityById[product.id].quantity;
+      product.quantity -= productQuantityById[product.id].quantity;
     });
 
     await this.ormRepository.save(productEntities);

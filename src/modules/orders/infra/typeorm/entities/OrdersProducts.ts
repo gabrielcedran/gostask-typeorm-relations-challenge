@@ -11,7 +11,7 @@ import {
 import Order from '@modules/orders/infra/typeorm/entities/Order';
 import Product from '@modules/products/infra/typeorm/entities/Product';
 
-@Entity({ name: 'order_products' })
+@Entity({ name: 'orders_products' })
 class OrdersProducts {
   @PrimaryGeneratedColumn()
   id: string;

@@ -107,7 +107,7 @@ export default class InitialDB1590430066761 implements MigrationInterface {
 
     await queryRunner.createTable(
       new Table({
-        name: 'order_products',
+        name: 'orders_products',
         columns: [
           {
             name: 'id',
@@ -146,26 +146,12 @@ export default class InitialDB1590430066761 implements MigrationInterface {
             default: 'now()',
           },
         ],
-        foreignKeys: [
-          {
-            name: 'fk_order_products_products',
-            columnNames: ['product_id'],
-            referencedTableName: 'products',
-            referencedColumnNames: ['id'],
-          },
-          {
-            name: 'fk_order_products_orders',
-            columnNames: ['order_id'],
-            referencedTableName: 'orders',
-            referencedColumnNames: ['id'],
-          },
-        ],
       }),
     );
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropTable('order_products');
+    await queryRunner.dropTable('orders_products');
     await queryRunner.dropTable('orders');
     await queryRunner.dropTable('products');
     await queryRunner.dropTable('customers');
