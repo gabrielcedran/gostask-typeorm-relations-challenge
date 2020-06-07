@@ -59,8 +59,7 @@ export default class InitialDB1590430066761 implements MigrationInterface {
           },
           {
             name: 'quantity',
-            type: 'decimal',
-            precision: 10,
+            type: 'integer',
           },
           {
             name: 'created_at',
@@ -132,8 +131,7 @@ export default class InitialDB1590430066761 implements MigrationInterface {
           },
           {
             name: 'quantity',
-            type: 'decimal',
-            precision: 10,
+            type: 'integer',
           },
           {
             name: 'created_at',

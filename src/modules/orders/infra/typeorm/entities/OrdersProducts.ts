@@ -33,7 +33,7 @@ class OrdersProducts {
   @Column()
   price: number;
 
-  @Column()
+  @Column({ type: 'int' })
   quantity: number;
 
   @CreateDateColumn()

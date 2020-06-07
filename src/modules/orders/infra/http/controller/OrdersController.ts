@@ -21,7 +21,6 @@ export default class OrdersController {
 
     const { id } = request.params;
     const order = await findOrderService.execute({ id });
-
     return response.status(200).json(order);
   }
 }
